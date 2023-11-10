@@ -1,19 +1,37 @@
 public class Main {
     public static void main(String[] args) {
-        // create an object of Queue class
+        // Ein Objekt der Klasse "Queue" erstellen
+        Queue2 q = new Queue2();
 
-        // try to delete element from the queue
+        // Versuch ein Element aus der Queue zu löschen
+        // Queue ist allerdings zurzeit leer
+        // Somit Meldung "Queue is empty" ist zu erwarten
+        q.dequeue();
 
-        // currently queue is empty
+        // Befüllen der Queue
+        for (int i = 1; i <= q.size; i++) {
+            q.enqueue(i);
+        }
 
-        // so deletion is not possible
+        // Einfügen eines 6. Elementes
+        // Meldung erwartet "Queue is full"
+        q.enqueue(10);
+        // Anzeigen der Elemente in der Queue
+        q.display();
 
-        // insert elements to the queue
+        // Entfernt das erste Element (First in, first out)
+        q.dequeue();
+        // Anzeigen der Elemente in der Queue
+        q.display();
 
-        // check when queue is full
+        // Entfernt das erste Element (First in, first out)
+        q.dequeue();
+        // Anzeigen der Elemente in der Queue
+        q.display();
 
-        // removes element until it is empty
-
-        // check if queue is empty
+        // Entfernt das erste Element (First in, first out)
+        q.dequeue();
+        // Anzeigen der Elemente in der Queue
+        q.display();
     }
 }
